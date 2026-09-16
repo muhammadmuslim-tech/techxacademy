@@ -92,7 +92,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/tech-x-academy-715b02406/"
+                href="https://www.linkedin.com/company/tech-x-academy/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
