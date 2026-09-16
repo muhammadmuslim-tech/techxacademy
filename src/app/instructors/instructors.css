@@ -1,0 +1,104 @@
+.instructors-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.instructors-page-hero {
+  padding: 90px 24px 80px;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(35, 146, 103, 0.09),
+      transparent 30%
+    ),
+    #f7faf8;
+  border-bottom: 1px solid #e7eeea;
+}
+
+.instructors-page-hero-content {
+  width: min(820px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.instructors-page-hero-content > span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #16815a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.instructors-page-hero h1 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+}
+
+.instructors-page-hero h1 strong {
+  color: #16815a;
+  font-weight: 800;
+}
+
+.instructors-page-hero p {
+  max-width: 680px;
+  margin: 24px auto 0;
+  color: #626b67;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.instructors-page-list {
+  padding: 90px 24px 110px;
+}
+
+.instructors-page-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.instructors-page-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 320px), 380px)
+  );
+  justify-content: center;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .instructors-page-hero {
+    padding: 70px 20px 65px;
+  }
+
+  .instructors-page-list {
+    padding: 65px 20px 80px;
+  }
+
+  .instructors-page-grid {
+    grid-template-columns: minmax(0, 380px);
+  }
+}
+
+@media (max-width: 480px) {
+  .instructors-page-hero {
+    padding: 60px 16px;
+  }
+
+  .instructors-page-hero h1 {
+    font-size: 43px;
+  }
+
+  .instructors-page-hero p {
+    font-size: 15px;
+  }
+
+  .instructors-page-list {
+    padding: 55px 16px 70px;
+  }
+}

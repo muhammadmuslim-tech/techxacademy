@@ -1,0 +1,370 @@
+.get-in-touch-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 24px;
+  overflow: hidden;
+  background: #f7faf9;
+  scroll-margin-top: 95px;
+}
+
+.get-in-touch-section::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: -300px;
+  left: -220px;
+  border-radius: 50%;
+  background: rgba(32, 180, 134, 0.08);
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+.get-in-touch-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -280px;
+  bottom: -300px;
+  border-radius: 50%;
+  background: rgba(21, 149, 110, 0.08);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.get-in-touch-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(430px, 0.82fr);
+  align-items: center;
+  gap: 100px;
+}
+
+.get-in-touch-content {
+  max-width: 610px;
+}
+
+.get-in-touch-heading {
+  text-align: left;
+}
+
+.get-in-touch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 24px;
+  padding: 8px 15px;
+  color: #15956e;
+  /* background: rgba(32, 180, 134, 0.08); */
+  /* border: 1px solid rgba(32, 180, 134, 0.18); */
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+
+.get-in-touch-heading h2 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -3px;
+}
+
+.get-in-touch-heading h2 span {
+  background: linear-gradient(
+    100deg,
+    #111111 0%,
+    #15956e 48%,
+    #20b486 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.get-in-touch-heading p {
+  max-width: 570px;
+  margin: 27px 0 0;
+  color: #626a67;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.get-in-touch-note {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 42px;
+  color: #858b88;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.get-in-touch-note-line {
+  width: 45px;
+  height: 1px;
+  background: rgba(21, 149, 110, 0.45);
+}
+
+.contact-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-card {
+  position: relative;
+  min-height: 125px;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.09);
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 12px 35px rgba(17, 17, 17, 0.045);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: #20b486;
+  transition: height 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateX(7px);
+  border-color: rgba(32, 180, 134, 0.28);
+  box-shadow: 0 20px 45px rgba(17, 17, 17, 0.09);
+}
+
+.contact-card:hover::before {
+  height: 100%;
+}
+
+.contact-icon {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.06);
+  border-radius: 15px;
+}
+
+.contact-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.whatsapp-contact-icon {
+  color: #15956e;
+  background: rgba(32, 180, 134, 0.1);
+}
+
+.phone-contact-icon {
+  color: #111111;
+  background: rgba(17, 17, 17, 0.07);
+}
+
+.email-contact-icon {
+  color: #15956e;
+  background: rgba(32, 180, 134, 0.1);
+}
+
+.contact-card-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-card-title {
+  color: #111111;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.contact-card-detail {
+  margin-top: 6px;
+  color: #15956e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.contact-card-hint {
+  margin-top: 4px;
+  color: #858b88;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.email-detail {
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.contact-card-arrow {
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  color: #a0a6a3;
+  font-size: 19px;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contact-card:hover .contact-card-arrow {
+  color: #15956e;
+  transform: translate(3px, -50%);
+}
+
+@media (max-width: 1050px) {
+  .get-in-touch-container {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
+    gap: 55px;
+  }
+
+  .get-in-touch-heading h2 {
+    font-size: clamp(40px, 5vw, 58px);
+  }
+}
+
+@media (max-width: 850px) {
+  .get-in-touch-section {
+    padding: 95px 24px;
+  }
+
+  .get-in-touch-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .get-in-touch-content {
+    max-width: 700px;
+  }
+
+  .get-in-touch-heading {
+    text-align: center;
+  }
+
+  .get-in-touch-heading p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .get-in-touch-note {
+    justify-content: center;
+  }
+
+  .contact-options {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .get-in-touch-section {
+    padding: 80px 16px 90px;
+  }
+
+  .get-in-touch-label {
+    margin-bottom: 20px;
+    font-size: 11px;
+  }
+
+  .get-in-touch-heading h2 {
+    font-size: clamp(35px, 10vw, 47px);
+    letter-spacing: -2px;
+  }
+
+  .get-in-touch-heading p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .get-in-touch-note {
+    margin-top: 30px;
+    font-size: 10px;
+    gap: 9px;
+  }
+
+  .get-in-touch-note-line {
+    width: 25px;
+  }
+
+  .contact-options {
+    gap: 11px;
+  }
+
+  .contact-card {
+    min-height: 108px;
+    padding: 18px 18px;
+    gap: 13px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact-card-title {
+    font-size: 13px;
+  }
+
+  .contact-card-detail {
+    font-size: 12px;
+  }
+
+  .email-detail {
+    font-size: 11px;
+  }
+
+  .contact-card-arrow {
+    right: 17px;
+    font-size: 17px;
+  }
+}

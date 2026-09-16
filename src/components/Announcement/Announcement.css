@@ -1,0 +1,465 @@
+
+.ai-announcement-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(7, 12, 10, 0.68);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  animation: ai-overlay-in 0.3s ease;
+}
+
+.ai-announcement-modal {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: calc(100vh - 48px);
+  /* overflow-y: auto; */
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 22px;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.3),
+    0 12px 35px rgba(0, 0, 0, 0.12);
+  animation: ai-modal-in 0.4s ease;
+}
+
+.ai-announcement-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ai-announcement-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ai-announcement-modal::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #d5ddd9;
+}
+
+.ai-announcement-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111111;
+  font-size: 23px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ai-announcement-close:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.ai-announcement-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 26px 62px 20px 34px;
+  border-bottom: 1px solid #edf0ee;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 184, 121, 0.07),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+.ai-announcement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #178459;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.ai-announcement-badge span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #21b978;
+  box-shadow:
+    0 0 0 4px rgba(33, 185, 120, 0.1),
+    0 0 12px rgba(33, 185, 120, 0.4);
+}
+
+.ai-announcement-status {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.ai-announcement-content {
+  padding: 42px 46px 40px;
+}
+
+.ai-announcement-eyebrow {
+  margin: 0 0 15px;
+  color: #21b978;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ai-announcement-content h2 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(39px, 6vw, 58px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -3px;
+}
+
+.ai-announcement-content h2 span {
+  font-weight: 800;
+}
+
+.ai-announcement-description {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: #626a66;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ai-announcement-divider {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 25px;
+  background: #e9eeeb;
+}
+
+.ai-course-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.ai-course-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #199565;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.ai-course-intro h3 {
+  margin: 0;
+  color: #171b19;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.ai-course-arrow {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce4df;
+  border-radius: 50%;
+  color: #16835a;
+  font-size: 18px;
+}
+
+.ai-course-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ai-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 72px;
+  padding: 14px;
+  border: 1px solid #e6ebe8;
+  border-radius: 11px;
+  background: #fafcfb;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-highlight:hover {
+  border-color: rgba(32, 180, 119, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.06);
+}
+
+.ai-highlight-number {
+  color: #22a870;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.ai-highlight strong {
+  display: block;
+  color: #161a18;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.ai-highlight div span {
+  display: block;
+  margin-top: 4px;
+  color: #858d89;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.ai-announcement-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.ai-announcement-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-message-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #20b477;
+}
+
+.ai-announcement-message p {
+  margin: 0;
+  color: #3f4844;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ai-announcement-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.ai-explore-button,
+.ai-enroll-button {
+  min-height: 44px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ai-explore-button {
+  background: #111111;
+  color: #ffffff;
+}
+
+.ai-explore-button:hover {
+  transform: translateY(-2px);
+  background: #1d1d1d;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ai-explore-button span {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.ai-explore-button:hover span {
+  transform: translateX(3px);
+}
+
+.ai-enroll-button {
+  border: 1px solid #d9e1dd;
+  background: #ffffff;
+  color: #171a18;
+}
+
+.ai-enroll-button:hover {
+  transform: translateY(-2px);
+  border-color: #21ad73;
+  color: #16835a;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.07);
+}
+
+.ai-announcement-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 34px;
+  border-top: 1px solid #edf0ee;
+  background: #fafcfb;
+  color: #8a928e;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+@keyframes ai-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ai-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .ai-announcement-overlay {
+    padding: 16px;
+  }
+
+  .ai-announcement-modal {
+    max-height: calc(100vh - 32px);
+    border-radius: 18px;
+  }
+
+  .ai-announcement-top {
+    padding: 22px 58px 18px 24px;
+  }
+
+  .ai-announcement-content {
+    padding: 32px 24px 30px;
+  }
+
+  .ai-announcement-content h2 {
+    font-size: 39px;
+    letter-spacing: -2px;
+  }
+
+  .ai-course-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-highlight {
+    min-height: auto;
+  }
+
+  .ai-announcement-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ai-announcement-actions {
+    width: 100%;
+  }
+
+  .ai-explore-button,
+  .ai-enroll-button {
+    flex: 1;
+  }
+
+  .ai-announcement-footer {
+    padding: 13px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-announcement-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ai-announcement-content {
+    padding: 28px 20px 24px;
+  }
+
+  .ai-announcement-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .ai-announcement-content h2 {
+    font-size: 33px;
+    line-height: 1;
+  }
+
+  .ai-announcement-description {
+    margin-top: 18px;
+    font-size: 13px;
+  }
+
+  .ai-course-intro h3 {
+    font-size: 16px;
+  }
+
+  .ai-announcement-actions {
+    flex-direction: column;
+  }
+
+  .ai-explore-button,
+  .ai-enroll-button {
+    width: 100%;
+  }
+
+  .ai-announcement-footer span:last-child {
+    display: none;
+  }
+}
+
