@@ -64,7 +64,7 @@ export default function Navbar() {
           onClick={closeMenu}
         >
           <img
-            src="/images/logo.png"
+            src="/images/Logo.png"
             alt="Tech X Academy Logo"
           />
 
