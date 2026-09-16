@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
               <img
-                src="/images/logo.png"
+                src="/images/Logo.png"
                 alt="Tech X Academy Logo"
               />
 
