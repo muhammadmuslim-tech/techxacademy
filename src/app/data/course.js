@@ -1,7 +1,7 @@
 export const courses = [
   {
     category: "Beginner",
-    title: "Foundation of Information Technology",
+    title: "Foundation of Information Technology ",
     shortTitle: "FIT",
     description:
       "TECH X ACADEMY's mandatory gateway program — every student must complete FIT before advancing to any specialization. Six months of real digital competency, AI literacy, and professional identity.",
